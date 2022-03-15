@@ -7,10 +7,8 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import java.lang.Exception
 
-class MovieDetailsUseCase(private val repository: MovieDetailsRepository)  {
-     suspend operator fun invoke(id:Int): Flow<Resource<MovieInfo>> {
-         return repository.getMovieDetails(id)
-     }
+interface MovieDetailsUseCase  {
+     suspend operator fun invoke(id:Int): Flow<Resource<MovieInfo>>
 
 
 }

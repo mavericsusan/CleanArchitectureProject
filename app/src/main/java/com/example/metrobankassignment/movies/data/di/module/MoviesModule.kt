@@ -6,7 +6,9 @@ import com.example.metrobankassignment.movies.data.retrofit.MovieListRepositoryI
 import com.example.metrobankassignment.movies.domain.repositories.MovieDetailsRepository
 import com.example.metrobankassignment.movies.domain.repositories.MovieRepository
 import com.example.metrobankassignment.movies.domain.usecases.MovieDetailsUseCase
+import com.example.metrobankassignment.movies.domain.usecases.MovieDetailsUseCaseImpl
 import com.example.metrobankassignment.movies.domain.usecases.MoviesListUseCase
+import com.example.metrobankassignment.movies.domain.usecases.MoviesListUseCaseImpl
 import com.example.metrobankassignment.movies.util.Constants
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
@@ -29,14 +31,14 @@ class MoviesModule {
      */
     @Provides
     fun getMoviesListUseCase(repository: MovieRepository) : MoviesListUseCase{
-        return MoviesListUseCase(repository)
+        return MoviesListUseCaseImpl(repository)
     }
     /**
      * Returns a use case for fetching the movies details
      */
     @Provides
     fun getMoviesDetailsUseCase(repository: MovieDetailsRepository) : MovieDetailsUseCase{
-        return MovieDetailsUseCase(repository)
+        return MovieDetailsUseCaseImpl(repository)
     }
 
     @Provides
