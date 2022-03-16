@@ -9,6 +9,9 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 
+/**
+ * implementation class for movie list repository
+ */
 class MovieListRepositoryImpl (private val apiService : MovieApiService) : MovieRepository {
       override suspend fun getMarvelMovies(): Flow<Resource<List<MovieInfo>>> {
           return flow {

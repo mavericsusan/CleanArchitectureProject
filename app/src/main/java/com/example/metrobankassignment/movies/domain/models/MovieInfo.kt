@@ -1,6 +1,8 @@
 package com.example.metrobankassignment.movies.domain.models
 
-
+/**
+ * app entity class for movie
+ */
 data class MovieInfo(
  val box_office: String?,
  val chronology: Int?,

@@ -2,6 +2,9 @@ package com.example.metrobankassignment.movies.data.dto
 
 import com.example.metrobankassignment.movies.domain.models.MovieInfo
 
+/**
+ * server model class for movie
+ */
 data class MovieInfoDto(
     val box_office: String,
     val chronology: Int,

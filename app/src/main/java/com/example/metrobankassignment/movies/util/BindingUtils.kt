@@ -11,8 +11,6 @@ import com.bumptech.glide.Glide
 class BindingUtils {
     companion object {
         /**
-         * @param url
-         * @param imageView
          * it will load image @param url with the help of glide
          * library into the @param imageView
          */

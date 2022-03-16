@@ -5,6 +5,9 @@ import com.example.metrobankassignment.movies.domain.repositories.MovieDetailsRe
 import com.example.metrobankassignment.movies.util.Resource
 import kotlinx.coroutines.flow.Flow
 
+/**
+ * use case implementation for listing the movies
+ */
 class MovieDetailsUseCaseImpl(private val repository: MovieDetailsRepository) : MovieDetailsUseCase {
     override suspend fun invoke(id: Int): Flow<Resource<MovieInfo>> {
         return repository.getMovieDetails(id)

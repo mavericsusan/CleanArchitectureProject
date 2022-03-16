@@ -1,5 +1,7 @@
 package com.example.metrobankassignment.movies.data.dto
-
+/**
+ * server model class for related movie
+ */
 data class RelatedMovy(
     val box_office: String,
     val chronology: Int,

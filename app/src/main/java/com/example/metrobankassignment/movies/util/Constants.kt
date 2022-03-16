@@ -1,8 +1,7 @@
 package com.example.metrobankassignment.movies.util
 
 /**
- * https://mcuapi.herokuapp.com/api/v1/movies
- * https://mcuapi.herokuapp.com/api/v1/movies/1
+ * base url
  * */
 class Constants {
     companion object{
