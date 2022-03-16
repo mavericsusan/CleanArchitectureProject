@@ -3,6 +3,7 @@ package com.example.metrobankassignment.movies.data.retrofit
 import com.example.metrobankassignment.movies.data.dto.MovieInfoDto
 import com.example.metrobankassignment.movies.domain.models.MovieInfo
 import com.example.metrobankassignment.movies.domain.usecases.MovieDetailsUseCase
+import com.example.metrobankassignment.movies.domain.usecases.MovieDetailsUseCaseImpl
 import com.example.metrobankassignment.movies.util.Resource
 import junit.framework.TestCase
 import kotlinx.coroutines.Dispatchers
@@ -36,7 +37,7 @@ class MovieDetailsRepositoryImplTest{
         movieResponse = mock<MovieInfoDto>()
         movieInfoResponse = mock<MovieInfo>()
         repository = MovieDetailsRepositoryImpl(apiService)
-        useCase = MovieDetailsUseCase(repository)
+        useCase = MovieDetailsUseCaseImpl(repository)
     }
     @After
     fun tearDown(){
