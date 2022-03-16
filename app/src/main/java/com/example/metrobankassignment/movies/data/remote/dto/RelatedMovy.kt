@@ -1,4 +1,4 @@
-package com.example.metrobankassignment.movies.data.dto
+package com.example.metrobankassignment.movies.data.remote.dto
 /**
  * server model class for related movie
  */

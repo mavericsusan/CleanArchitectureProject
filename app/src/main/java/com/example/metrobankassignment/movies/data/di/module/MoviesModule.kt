@@ -1,8 +1,8 @@
 package com.example.metrobankassignment.movies.data.di.module
 
-import com.example.metrobankassignment.movies.data.retrofit.MovieApiService
-import com.example.metrobankassignment.movies.data.retrofit.MovieDetailsRepositoryImpl
-import com.example.metrobankassignment.movies.data.retrofit.MovieListRepositoryImpl
+import com.example.metrobankassignment.movies.data.remote.MovieApiService
+import com.example.metrobankassignment.movies.data.repository.MovieDetailsRepositoryImpl
+import com.example.metrobankassignment.movies.data.repository.MovieListRepositoryImpl
 import com.example.metrobankassignment.movies.domain.repositories.MovieDetailsRepository
 import com.example.metrobankassignment.movies.domain.repositories.MovieRepository
 import com.example.metrobankassignment.movies.domain.usecases.MovieDetailsUseCase

@@ -1,5 +1,6 @@
-package com.example.metrobankassignment.movies.data.retrofit
+package com.example.metrobankassignment.movies.data.repository
 
+import com.example.metrobankassignment.movies.data.remote.MovieApiService
 import com.example.metrobankassignment.movies.domain.repositories.MovieDetailsRepository
 import com.example.metrobankassignment.movies.domain.models.MovieInfo
 import com.example.metrobankassignment.movies.util.Resource

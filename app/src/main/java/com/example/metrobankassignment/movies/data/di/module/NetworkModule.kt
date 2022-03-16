@@ -1,6 +1,6 @@
 package com.example.metrobankassignment.movies.data.di.module
 
-import com.example.metrobankassignment.movies.data.retrofit.MovieApiService
+import com.example.metrobankassignment.movies.data.remote.MovieApiService
 import com.example.metrobankassignment.movies.util.Constants
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder

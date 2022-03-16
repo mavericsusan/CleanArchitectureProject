@@ -1,6 +1,8 @@
 package com.example.metrobankassignment.movies.data.retrofit
 
-import com.example.metrobankassignment.movies.data.dto.MovieInfoDto
+import com.example.metrobankassignment.movies.data.remote.MovieApiService
+import com.example.metrobankassignment.movies.data.remote.dto.MovieInfoDto
+import com.example.metrobankassignment.movies.data.repository.MovieDetailsRepositoryImpl
 import com.example.metrobankassignment.movies.domain.models.MovieInfo
 import com.example.metrobankassignment.movies.domain.usecases.MovieDetailsUseCase
 import com.example.metrobankassignment.movies.domain.usecases.MovieDetailsUseCaseImpl
@@ -15,7 +17,6 @@ import kotlinx.coroutines.test.TestCoroutineDispatcher
 import kotlinx.coroutines.test.resetMain
 import kotlinx.coroutines.test.setMain
 import org.junit.After
-import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
 import org.mockito.Mockito

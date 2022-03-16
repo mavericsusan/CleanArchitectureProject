@@ -1,7 +1,7 @@
-package com.example.metrobankassignment.movies.data.retrofit
+package com.example.metrobankassignment.movies.data.remote
 
-import com.example.metrobankassignment.movies.data.dto.MovieInfoDto
-import com.example.metrobankassignment.movies.data.dto.MovieListDto
+import com.example.metrobankassignment.movies.data.remote.dto.MovieInfoDto
+import com.example.metrobankassignment.movies.data.remote.dto.MovieListDto
 import retrofit2.http.GET
 import retrofit2.http.Path
 

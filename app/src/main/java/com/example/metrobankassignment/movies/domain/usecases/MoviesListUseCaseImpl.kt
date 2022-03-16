@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.Flow
 /**
  * use case implementation for movie details
  */
-class MoviesListUseCaseImpl(private val repository : MovieRepository) : MoviesListUseCase{
+class MoviesListUseCaseImpl(private val repository : MovieRepository) : MoviesListUseCase {
     override suspend fun invoke(): Flow<Resource<List<MovieInfo>>> {
         val repos =  repository.getMarvelMovies()
             return repos
