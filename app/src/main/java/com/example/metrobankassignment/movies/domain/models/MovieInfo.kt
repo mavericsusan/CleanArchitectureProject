@@ -1,7 +1,5 @@
 package com.example.metrobankassignment.movies.domain.models
 
-import com.example.metrobankassignment.movies.data.dto.RelatedMovy
-import com.google.gson.annotations.SerializedName
 
 data class MovieInfo(
  val box_office: String?,

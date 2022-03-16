@@ -3,7 +3,6 @@ package com.example.metrobankassignment.movies.presentation.activities
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.GridLayoutManager
@@ -12,7 +11,7 @@ import com.example.metrobankassignment.databinding.ActivityMovieListBinding
 import com.example.metrobankassignment.movies.MoviesApplication
 import com.example.metrobankassignment.movies.domain.models.MovieInfo
 import com.example.metrobankassignment.movies.presentation.viewmodels.MovieListViewModel
-import com.example.metrobankassignment.movies.util.interfaces.onClickListener
+import com.example.metrobankassignment.movies.util.interfaces.OnClickListener
 import com.example.movieapp.presentation.adapters.MovieListAdapter
 import javax.inject.Inject
 
@@ -20,7 +19,7 @@ import javax.inject.Inject
  * activity to display the list of movies..
  */
 
-class MovieListActivity : AppCompatActivity(), onClickListener{
+class MovieListActivity : AppCompatActivity(), OnClickListener{
     /*
     Dagger provides the viewmodel instance
      */

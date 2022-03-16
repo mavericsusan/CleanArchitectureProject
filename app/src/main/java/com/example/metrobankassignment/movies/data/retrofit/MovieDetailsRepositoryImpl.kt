@@ -1,7 +1,5 @@
 package com.example.metrobankassignment.movies.data.retrofit
 
-import android.util.Log
-import com.example.metrobankassignment.movies.data.dto.MovieInfoDto
 import com.example.metrobankassignment.movies.domain.repositories.MovieDetailsRepository
 import com.example.metrobankassignment.movies.domain.models.MovieInfo
 import com.example.metrobankassignment.movies.util.Resource

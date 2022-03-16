@@ -9,16 +9,8 @@ import com.example.metrobankassignment.movies.domain.usecases.MovieDetailsUseCas
 import com.example.metrobankassignment.movies.domain.usecases.MovieDetailsUseCaseImpl
 import com.example.metrobankassignment.movies.domain.usecases.MoviesListUseCase
 import com.example.metrobankassignment.movies.domain.usecases.MoviesListUseCaseImpl
-import com.example.metrobankassignment.movies.util.Constants
-import com.google.gson.Gson
-import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
-import okhttp3.OkHttpClient
-import okhttp3.logging.HttpLoggingInterceptor
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
-import javax.inject.Singleton
 
 /**@Module informs Dagger that this class is a Dagger Module
  * Dagger module class for api repository and usecases

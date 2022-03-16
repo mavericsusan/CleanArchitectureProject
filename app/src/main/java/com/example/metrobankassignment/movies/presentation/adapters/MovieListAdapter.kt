@@ -4,16 +4,15 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.example.metrobankassignment.R
 import com.example.metrobankassignment.databinding.MovieItemBinding
 import com.example.metrobankassignment.movies.domain.models.MovieInfo
-import com.example.metrobankassignment.movies.util.interfaces.onClickListener
+import com.example.metrobankassignment.movies.util.interfaces.OnClickListener
 
 /**
  * @MovieListAdapter class shows movie list
  */
-class MovieListAdapter(private val movieList : List<MovieInfo>, private val listener : onClickListener) : RecyclerView.Adapter<MovieListAdapter.MovieViewHolder>() {
+class MovieListAdapter(private val movieList : List<MovieInfo>, private val listener : OnClickListener) : RecyclerView.Adapter<MovieListAdapter.MovieViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):  MovieViewHolder{
@@ -30,14 +29,11 @@ class MovieListAdapter(private val movieList : List<MovieInfo>, private val list
        return movieList.size
     }
     class MovieViewHolder(private val binding: MovieItemBinding) : RecyclerView.ViewHolder(binding.root){
-        fun addData(item: MovieInfo, listener: onClickListener){
+        fun addData(item: MovieInfo, listener: OnClickListener){
 
             binding.movieitem = item
-
-
-            binding.imageView.setOnClickListener {
-                listener.onItemClickListener(item)
-            }
+            binding.onClick = listener
+            binding.executePendingBindings()
         }
     }
 

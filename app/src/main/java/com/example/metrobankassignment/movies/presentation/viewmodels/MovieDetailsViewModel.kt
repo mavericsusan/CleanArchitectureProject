@@ -1,6 +1,5 @@
 package com.example.metrobankassignment.movies.presentation.viewmodels
 
-
 import androidx.lifecycle.*
 import com.example.metrobankassignment.movies.domain.models.MovieInfo
 
@@ -19,15 +18,16 @@ import javax.inject.Inject
 
 class MovieDetailsViewModel @Inject constructor(private val useCase: MovieDetailsUseCase) :
     ViewModel() {
-    private val _dataState: MutableLiveData<Resource<MovieInfo>> = MutableLiveData()
-    val dataState: LiveData<Resource<MovieInfo>>
-        get() = _dataState
+    private val _errorState: MutableLiveData<String> = MutableLiveData()
+    val errorState: LiveData<String>
+        get() = _errorState
     private val _movieDetails: MutableLiveData<MovieInfo?> = MutableLiveData()
     val movieDetails: MutableLiveData<MovieInfo?>
     get() = _movieDetails
     private val _isLoading: MutableLiveData<Boolean> = MutableLiveData()
     val isLoading: LiveData<Boolean>
         get() = _isLoading
+
 
     fun getMovieDetails(id: Int) {
             getMovieDetailsFlow(id)
@@ -41,7 +41,6 @@ class MovieDetailsViewModel @Inject constructor(private val useCase: MovieDetail
     fun getMovieDetailsFlow(id: Int) {
         viewModelScope.launch(Dispatchers.Main) {
             useCase(id).collect {
-           _dataState.value = it
             when(it){
                 is Resource.Success -> {
                     _isLoading.value = false
@@ -52,6 +51,7 @@ class MovieDetailsViewModel @Inject constructor(private val useCase: MovieDetail
                 }
                 is Resource.Error -> {
                     _isLoading.value = false
+                    _errorState.value = it.message.toString()
                 }
             }
             }

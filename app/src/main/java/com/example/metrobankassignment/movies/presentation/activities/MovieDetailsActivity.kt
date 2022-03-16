@@ -2,13 +2,13 @@ package com.example.metrobankassignment.movies.presentation.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import androidx.appcompat.app.AlertDialog
+
 
 import androidx.databinding.DataBindingUtil
 import com.example.metrobankassignment.R
 import com.example.metrobankassignment.databinding.ActivityMovieDetailsBinding
 import com.example.metrobankassignment.movies.MoviesApplication
-import com.example.metrobankassignment.movies.domain.models.MovieInfo
 
 
 import com.example.metrobankassignment.movies.presentation.viewmodels.MovieDetailsViewModel
@@ -44,12 +44,20 @@ class MovieDetailsActivity : AppCompatActivity() {
      * observe the changes in live data of @MovieDetailsViewModel for movie details.
      */
     private fun subscribeforMovieDetail() {
-       viewModel.dataState.observe(this,  {it ->
-
+       viewModel.errorState.observe(this,  {
+            displayErrorDialog(it)
        })
     }
 
-
-
+    fun displayErrorDialog(message : String){
+        val alertDialog = AlertDialog.Builder(this)
+        alertDialog.setTitle(R.string.error_details)
+        alertDialog.setMessage(message)
+        alertDialog.setPositiveButton("OK"){dialogInterface, which ->
+           onBackPressed()
+        }
+        alertDialog.setCancelable(false)
+        alertDialog.show()
+    }
 
 }

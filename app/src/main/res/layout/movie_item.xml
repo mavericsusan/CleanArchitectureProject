@@ -7,7 +7,9 @@
         <variable
             name="movieitem"
             type="com.example.metrobankassignment.movies.domain.models.MovieInfo" />
-
+        <variable
+            name="onClick"
+            type="com.example.metrobankassignment.movies.util.interfaces.OnClickListener" />
 
     </data>
 
@@ -37,6 +39,7 @@
                     android:contentDescription="@string/movieitem"
                     android:scaleType="centerCrop"
                     app:imageUrl="@{movieitem.cover_url}"
+                    android:onClick="@{() -> onClick.onItemClickListener(movieitem)}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
